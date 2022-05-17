@@ -75,6 +75,7 @@ namespace Exam_S00211124
             {
                 //update display
                 txtDesc.Text = selected.Description;
+               
             }
         }
     }

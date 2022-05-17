@@ -11,14 +11,15 @@
         <DataTemplate x:Key="lbxTemplate">
             <StackPanel Orientation="Horizontal" Margin="5">
                 <Image Source="{Binding PropertyImage}" Width="40" Margin="5"></Image>
-                
+                <TextBlock Text="{Binding Location}" FontSize="12" Margin="5"/>
+                <TextBlock Text="{Binding Price}" FontSize="12" Margin="5"/>
             </StackPanel>
         </DataTemplate>
     </Window.Resources>
-    
+
     <Grid>
         <Label Content="Property Listing" HorizontalAlignment="Left" Margin="68,33,0,0" VerticalAlignment="Top" Height="45" Width="164" FontSize="20"/>
-        <ListBox x:Name="lbx1" HorizontalAlignment="Left" Height="250" Margin="68,96,0,0" VerticalAlignment="Top" Width="278" SelectionChanged="lbx1_SelectionChanged"/>
+        <ListBox ItemTemplate="{StaticResource lbxTemplate}" x:Name="lbx1" HorizontalAlignment="Left" Height="250" Margin="68,96,0,0" VerticalAlignment="Top" Width="278" SelectionChanged="lbx1_SelectionChanged"/>
         <TextBlock x:Name="txtDesc" HorizontalAlignment="Left" Margin="488,96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="250" Width="232"/>
 
     </Grid>
