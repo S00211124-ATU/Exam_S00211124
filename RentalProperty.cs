@@ -22,7 +22,17 @@ namespace Exam_S00211124
         public decimal Price { get; set; }
         public string Description { get; set; }
         public RentalType TypeOfRental { get; set; }
+        public string PropertyImage { get; set; }
 
+        public override string ToString()
+        {
+            return $"{Location} {Price}";
+        }
+
+        public string GetDetails()
+        {
+            return $"";
+        }
         public void IncreaseRentPercentage(decimal percentageDecrease)
         {
             Price = Price - (Price * (percentageDecrease/100));

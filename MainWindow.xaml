@@ -5,8 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Exam_S00211124"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+
+    <Window.Resources>
+        <DataTemplate x:Key="lbxTemplate">
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <Image Source="{Binding PropertyImage}" Width="40" Margin="5"></Image>
+                
+            </StackPanel>
+        </DataTemplate>
+    </Window.Resources>
+    
     <Grid>
-        
+        <Label Content="Property Listing" HorizontalAlignment="Left" Margin="68,33,0,0" VerticalAlignment="Top" Height="45" Width="164" FontSize="20"/>
+        <ListBox x:Name="lbx1" HorizontalAlignment="Left" Height="250" Margin="68,96,0,0" VerticalAlignment="Top" Width="278" SelectionChanged="lbx1_SelectionChanged"/>
+        <TextBlock x:Name="txtDesc" HorizontalAlignment="Left" Margin="488,96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="250" Width="232"/>
+
     </Grid>
 </Window>
